@@ -1,0 +1,62 @@
+<%= form_with(model: contact) do |form| %>
+  <% if contact.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+        <% contact.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+<%= form.label :avatar %>
+<%= form.file_field :avatar %>
+</div>
+
+<div class="field">
+<%= form.label :contact_file %>
+<%= form.file_field :contact_file %>
+</div>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name" %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :email, class:"form-control", placeholder:"Email"  %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :phone, class:"form-control", placeholder:"Phone"  %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= form.text_area :description, class:"form-control", placeholder:"Description"  %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= form.text_area :notes, class:"form-control", placeholder:"Notes"  %>
+  </div>
+
+   <div class="field form-group">
+    
+    <%= form.number_field :user_id, id: :contact_user_id, class:"form-control", value:current_user.id, type: :hidden  %>
+  </div>
+
+  <div>
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

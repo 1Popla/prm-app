@@ -1,0 +1,24 @@
+=> [32m#<ActionMailer::MailDeliveryJob:0x00007fbc251948d8[0m
+ @arguments[32m=[0m
+  [[31m[1;31m"[0m[31mConsultationMailer[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mconsultation_reminder[1;31m"[0m[31m[0m,
+   [31m[1;31m"[0m[31mdeliver_now[1;31m"[0m[31m[0m,
+   {[33m:args[0m=>
+     [[32m#<User id: 1, email: "marcin.poplawski98@gmail.com", created_at: "2022-08-23 17:57:05.017246000 +0000", updated_at: "2022-08-23 17:57:05.017246000 +0000">[0m,
+      [32m#<Consultation:0x00007fbc251b9048[0m
+       id: [1;34m4[0m,
+       title: [31m[1;31m"[0m[31mczas[1;31m"[0m[31m[0m,
+       description: [31m[1;31m"[0m[31mczas[1;31m"[0m[31m[0m,
+       start_time: [1;34;4mThu[0m, [1;34m25[0m [1;34;4mAug[0m [1;34m2022[0m [1;34m12[0m:[1;34m39[0m:[1;34m00[0m.[1;37;41m000000000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+       end_time: [1;34;4mSat[0m, [1;34m27[0m [1;34;4mAug[0m [1;34m2022[0m [1;34m03[0m:[1;34m33[0m:[1;34m00[0m.[1;37;41m000000000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+       user_id: [1;34m1[0m,
+       created_at: [1;34;4mThu[0m, [1;34m25[0m [1;34;4mAug[0m [1;34m2022[0m [1;34m10[0m:[1;34m38[0m:[1;35m34.628480000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+       updated_at: [1;34;4mThu[0m, [1;34m25[0m [1;34;4mAug[0m [1;34m2022[0m [1;34m10[0m:[1;34m38[0m:[1;35m34.628480000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]}],
+ @exception_executions[32m=[0m{},
+ @executions[32m=[0m[1;34m0[0m,
+ @job_id[32m=[0m[31m[1;31m"[0m[31m17b2ebad-b100-4c2c-8ee1-c5d7be59dbbd[1;31m"[0m[31m[0m,
+ @priority[32m=[0m[1;36mnil[0m,
+ @provider_job_id[32m=[0m[31m[1;31m"[0m[31me817c69c-a7cb-4ffe-8310-aa19ffd6102e[1;31m"[0m[31m[0m,
+ @queue_name[32m=[0m[31m[1;31m"[0m[31mdefault[1;31m"[0m[31m[0m,
+ @successfully_enqueued[32m=[0m[1;36mtrue[0m,
+ @timezone[32m=[0m[31m[1;31m"[0m[31mUTC[1;31m"[0m[31m[0m[32m>[0m

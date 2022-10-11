@@ -1,0 +1,49 @@
+<p style="color: green">
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @contact.first_name %>
+ 
+  <%= @contact.last_name %></h1>
+  <br/>
+
+  <p>
+  <strong>Avatar:</strong>
+  <% if @contact.avatar.attached? %>
+  <%= image_tag @contact.avatar, width: "150x150" %>
+  <% else %>
+  No avatar
+  <% end %>
+  </p>
+
+ 
+   <% if @contact.contact_file.attached? %>
+  <%= link_to 'View file', @contact.contact_file %>
+  <% else %>
+  Vcard status: NONE
+  <% end %>
+  </p>
+ 
+  <p class="lead"><%= @contact.email %> | 
+  <%= @contact.phone %> |
+   <%= @contact.description %> |
+    <%= @contact.notes %>
+</p>
+
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  
+  
+   <%= link_to "Edit this contact", edit_contact_path(@contact), class:"btn btn-secondary" %> 
+  <%= link_to "Back to contacts", contacts_path, class:"btn btn-secondary"  %>
+  
+    
+</div>
+
+
+
+<div>
+ 
+
+  <%= button_to "Destroy this contact", @contact, method: :delete %>
+</div>

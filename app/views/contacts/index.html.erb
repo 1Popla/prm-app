@@ -1,0 +1,71 @@
+
+<% if user_signed_in?%>
+
+
+<p style="color: green">
+
+
+<h1>Contacts</h1>
+
+ 
+
+
+<table class="table table-hover table-bordered" >
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Avatar</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Description</th>
+      <th scope="col">Notes</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+      <th scope="col">User ID</th>
+      
+
+    </tr>
+  </thead>
+
+  
+  <tbody>
+
+  <% @contacts.each do |contact| %>
+    <% if contact.user == current_user %>
+    <tr>
+    
+    <td><%=image_tag contact.avatar, width: "50px" if contact.avatar.attached? %></td>
+    <td>
+    <%= link_to contact.first_name + ' ' + contact.last_name, contact %>
+    </td>
+    
+    <td><%=contact.email%></td>
+    <td><%=contact.phone%></td>
+    <td><%=contact.description%></td>
+    <td><%=contact.notes%></td>
+    
+    
+    <td><%= link_to "Edit ", edit_contact_path(contact) %></td>
+     <td><%= link_to "Destroy", contact_path(contact), data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } %></td>
+    <td><%= contact.user_id %></td>
+    
+    </tr>
+  <% end %>
+  <% end %>
+</tbody>
+</table>
+
+<br>
+
+
+
+
+<%= link_to "New contact", new_contact_path, class:"btn btn-secondary" %>
+
+<% else %>
+<br/>
+<h1>Welcome!</h1>
+<% end %>
+ 
+
